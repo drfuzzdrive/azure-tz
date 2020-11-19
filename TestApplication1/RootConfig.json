@@ -1,0 +1,25 @@
+﻿{
+  "PrintProperties": {
+    "BaseURL": " http://localhost:5000/api/Datecs/",
+    "COM": "COM9",
+    "Bps": 9600
+  },
+  "PaymentProperties": {
+    "Simulation": "",
+    "UseFiscal": true,
+    "UseTerminal": true
+  },
+  "FacePayProperties": {
+    "API_URL": "https://blah.blah.com/api/cashbox/pay",
+    "CompanyId": "megacompany",
+    "PublickKey": "SGVsbG8gdGhlcmUp",
+    "MerchantId": "i78920691023",
+    "CashboxId": "3"
+  },
+  "TerminalProperties": {
+    "TerminalID": 31,
+    "CashierPassword": "00000000",
+    "TerminalTimeToStart": "2020-01-01T08:00:00",
+    "TerminalTimeToShutDown": "2020-01-01T18:00:00"
+  }
+}
