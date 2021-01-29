@@ -1,4 +1,6 @@
 # Docker
+trigger:
+- release
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(Build.BinariesDirectory)'
