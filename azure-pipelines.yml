@@ -6,7 +6,7 @@ pool:
 
 #container: mcr.microsoft.com/windows/servercore:ltsc2019
 #container: mcr.microsoft.com/dotnet/core/runtime:3.1-nanoserver-1903
-container: mcr.microsoft.com/dotnet/sdk:3.1  
+container: mcr.microsoft.com/azure-functions/dotnet:3.0  
 
 steps:
 #- task: ArchiveFiles@2
