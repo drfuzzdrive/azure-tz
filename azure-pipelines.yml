@@ -9,5 +9,8 @@ steps:
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
-    targetPath: $(System.DefaultWorkingDirectory)
-    artifactName: WebApp
+- task: DownloadBuildArtifacts@2
+  inputs:
+    buildType: 'current'
+    downloadType: 'single'
+    downloadPath: '$(System.ArtifactsDirectory)'
