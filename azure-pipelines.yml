@@ -36,4 +36,4 @@ steps:
   inputs:
     repository: 'https://github.com/drfuzzdrive/systemgroup.git'
     command: 'build'
-    Dockerfile: '**/Dockerfile'
+    Dockerfile: '/Dockerfile'
