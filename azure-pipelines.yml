@@ -9,7 +9,7 @@ steps:
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
-- task: DownloadBuildArtifacts@2
+- task: DownloadBuildArtifacts@0
   inputs:
     buildType: 'current'
     downloadType: 'single'
