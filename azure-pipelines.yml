@@ -32,10 +32,16 @@ steps:
     #buildContext: 'TestApplication1'
 
 
-- task: Docker@2
-  inputs:
+#- task: Docker@2
+  #inputs:
 #    #repository: 'https://github.com/drfuzzdrive/systemgroup.git'
-    command: 'build'
-    Dockerfile: '$(Build.SourcesDirectory)/taskapp/taskapp/Dockerfile'
+    #command: 'build'
+    #Dockerfile: '$(Build.SourcesDirectory)/taskapp/taskapp/Dockerfile'
     ##buildContext: '$(System.DefaultWorkingDirectory)/TestApplication1'
-    buildContext: .
+    #buildContext: .
+  
+
+- task: VSBuild@1
+  inputs:
+    solution: '**\*.sln'
+    vsVersion: 'latest'
