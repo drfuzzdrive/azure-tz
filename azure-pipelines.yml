@@ -2,8 +2,8 @@
 trigger:
 - release
 pool:
-  #vmImage: 'windows-2019'
-  vmImage: 'vs2017-win2016'
+  vmImage: 'windows-2019'
+  #vmImage: 'vs2017-win2016'
 
 #container: mcr.microsoft.com/windows/servercore:ltsc2019
 #container: mcr.microsoft.com/dotnet/core/runtime:3.1-nanoserver-1903
