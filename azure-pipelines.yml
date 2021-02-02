@@ -3,45 +3,8 @@ trigger:
 - release
 pool:
   vmImage: 'windows-2019'
-  #vmImage: 'vs2017-win2016'
-
-#container: mcr.microsoft.com/windows/servercore:ltsc2019
-#container: mcr.microsoft.com/dotnet/core/runtime:3.1-nanoserver-1903
-#container: mcr.microsoft.com/windows:20H2
 
 steps:
-#- task: ArchiveFiles@2
-#  inputs:
-#    rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
-#    includeRootFolder: true
-#    archiveType: 'zip'
-#    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-#    replaceExistingArchive: true
-
-#- task: PublishPipelineArtifact@1
-#  inputs:
-#    targetPath: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-#    artifactName: WebApp
-#
-#- task: Docker@2
-#  inputs:
-#    command: 'build'
-    #Dockerfile: '$(Build.Repository.LocalPath)/TestApplication1/Dockerfile'
-    #Dockerfile: '$(System.DefaultWorkingDirectory)\TestApplication1\Dockerfile'
-    #Dockerfile: 'TestApplication1/Dockerfile'
-    #buildContext: $(Build.Repository.LocalPath)
-    #dockerfile: '{{ dockerfilePath }}'
-    #buildContext: 'TestApplication1'
-
-
-#- task: Docker@2
-  #inputs:
-#    #repository: 'https://github.com/drfuzzdrive/systemgroup.git'
-    #command: 'build'
-    #Dockerfile: '$(Build.SourcesDirectory)/taskapp/taskapp/Dockerfile'
-    ##buildContext: '$(System.DefaultWorkingDirectory)/TestApplication1'
-    #buildContext: .
-
 - task: NuGetCommand@2
   inputs:
     command: restore
