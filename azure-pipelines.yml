@@ -34,7 +34,7 @@ steps:
 
 - task: Docker@2
   inputs:
-    repository: 'https://github.com/drfuzzdrive/systemgroup.git'
+    #repository: 'https://github.com/drfuzzdrive/systemgroup.git'
     command: 'build'
     #Dockerfile: 'TestApplication1/Dockerfile'
     buildContext: '$(System.DefaultWorkingDirectory)/TestApplication1'
