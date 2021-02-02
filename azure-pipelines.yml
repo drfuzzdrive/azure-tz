@@ -42,6 +42,9 @@ steps:
     ##buildContext: '$(System.DefaultWorkingDirectory)/TestApplication1'
     #buildContext: .
 
+- task: NuGetCommand@2
+  inputs:
+    command: restore
 - task: MSBuild@1
   inputs:
     solution: '**\*.sln'
