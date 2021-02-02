@@ -15,8 +15,8 @@ steps:
     targetPath: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     artifactName: WebApp
 
-- task: DockerCompose@0
+- task: Docker@2
   inputs:
-    containerregistrytype: 'Container Registry'
-    dockerComposeFile: '**/docker-compose.yml'
-    action: 'Build services'
+    command: 'build'
+    Dockerfile: 'TestApplication1/Dockerfile'
+    buildContext: 'TestApplication1'
