@@ -36,5 +36,5 @@ steps:
   inputs:
 #    #repository: 'https://github.com/drfuzzdrive/systemgroup.git'
     command: 'build'
-    Dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
+    Dockerfile: '$(Build.SourcesDirectory)/taskapp/taskapp/Dockerfile'
     ##buildContext: '$(System.DefaultWorkingDirectory)/TestApplication1'
