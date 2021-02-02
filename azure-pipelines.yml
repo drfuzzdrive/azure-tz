@@ -37,4 +37,4 @@ steps:
 #    #repository: 'https://github.com/drfuzzdrive/systemgroup.git'
     command: 'build'
     Dockerfile: 'TestApplication1/Dockerfile'
-    buildContext: '$(System.DefaultWorkingDirectory)/TestApplication1'
+    ##buildContext: '$(System.DefaultWorkingDirectory)/TestApplication1'
