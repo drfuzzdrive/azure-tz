@@ -38,3 +38,4 @@ steps:
     command: 'build'
     Dockerfile: '$(Build.SourcesDirectory)/taskapp/taskapp/Dockerfile'
     ##buildContext: '$(System.DefaultWorkingDirectory)/TestApplication1'
+    buildContext: .
