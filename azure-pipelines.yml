@@ -27,5 +27,6 @@ steps:
     #Dockerfile: '$(Build.Repository.LocalPath)/TestApplication1/Dockerfile'
     #Dockerfile: '$(System.DefaultWorkingDirectory)\TestApplication1\Dockerfile'
     Dockerfile: 'TestApplication1/Dockerfile'
+    buildContext: $(Build.Repository.LocalPath)
     #dockerfile: '{{ dockerfilePath }}'
-    buildContext: 'TestApplication1'
+    #buildContext: 'TestApplication1'
