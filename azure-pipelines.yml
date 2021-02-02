@@ -8,18 +8,18 @@ container: mcr.microsoft.com/windows/servercore:ltsc2019
 #container: mcr.microsoft.com/dotnet/core/runtime:3.1-nanoserver-1903
 
 steps:
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
-    includeRootFolder: true
-    archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-    replaceExistingArchive: true
+#- task: ArchiveFiles@2
+#  inputs:
+#    rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
+#    includeRootFolder: true
+#    archiveType: 'zip'
+#    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+#    replaceExistingArchive: true
 
-- task: PublishPipelineArtifact@1
-  inputs:
-    targetPath: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-    artifactName: WebApp
+#- task: PublishPipelineArtifact@1
+#  inputs:
+#    targetPath: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+#    artifactName: WebApp
 #
 #- task: Docker@2
 #  inputs:
@@ -31,10 +31,10 @@ steps:
     #dockerfile: '{{ dockerfilePath }}'
     #buildContext: 'TestApplication1'
 
-#
-#- task: Docker@2
-#  inputs:
+
+- task: Docker@2
+  inputs:
 #    #repository: 'https://github.com/drfuzzdrive/systemgroup.git'
-#    command: 'build'
-#    Dockerfile: 'Dockerfile'
-#    buildContext: '$(System.DefaultWorkingDirectory)/TestApplication1'
+    command: 'build'
+    Dockerfile: 'Dockerfile'
+    buildContext: '$(System.DefaultWorkingDirectory)/s/TestApplication1'
