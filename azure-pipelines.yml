@@ -41,7 +41,13 @@ steps:
     #Dockerfile: '$(Build.SourcesDirectory)/taskapp/taskapp/Dockerfile'
     ##buildContext: '$(System.DefaultWorkingDirectory)/TestApplication1'
     #buildContext: .
-  
+- task: UseDotNet@2
+  displayName: 'Use .NET Core sdk'
+  inputs:
+    packageType: sdk
+    version: 3.1
+    installationPath: $(Agent.ToolsDirectory)/dotnet
+
 
 - task: VSBuild@1
   inputs:
