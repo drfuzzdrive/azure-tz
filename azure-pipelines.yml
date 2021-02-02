@@ -45,4 +45,4 @@ steps:
 - task: VSBuild@1
   inputs:
     solution: '**\*.sln'
-    vsVersion: 'latest'
+    vsVersion: '16.0'
