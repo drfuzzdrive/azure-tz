@@ -4,6 +4,8 @@ trigger:
 pool:
   vmImage: 'windows-2019'
 
+container: mcr.microsoft.com/windows/servercore:ltsc2019
+
 steps:
 #- task: ArchiveFiles@2
 #  inputs:
