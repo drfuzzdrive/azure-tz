@@ -42,7 +42,7 @@ steps:
     ##buildContext: '$(System.DefaultWorkingDirectory)/TestApplication1'
     #buildContext: .
 
-- task: VSBuild@1
+- task: MSBuild@1
   inputs:
     solution: '**\*.sln'
-    vsVersion: '16.0'
+    msbuildVersion: '16.0'
